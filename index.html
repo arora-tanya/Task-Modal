@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    
+    <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css”>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awsome/4.1.0/css/font-awsome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fontawesome.github.io/Font-awsome/3.2.1/assets/font-awsome/css/font-awsome.css">
+    <script src="https://kit.fontawesome.com/e79b5b76b9.js" crossorigin="anonymous"></script>
+    <title>Modal 1</title>
+  </head>
+  <body>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p>1 <br>Private Task - <a href="#" class="option">Make public</a></p>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col lg-6" id="column1">
+                  <p><span class="topic">Related:<span><a href="#" class="circle">#139 - Teat project - ABC Corp</a></p>
+                  <div class="icons">
+                    <!--<div class="item">
+                      <div class="tooltip">Mark as Complete</div>
+                      <button class="icon"><i class="fa-solid fa-square-check"></i></button>
+                    </div>-->
+                    <div class="item">
+                      <div class="tooltip">Timesheets</div>
+                      <button class="icon"><i class="fa fa-solid fa-list"></i></button>
+                    </div>
+                    <button type="submit" class="circle timer"><i class="fa fa-clock"></i>Start Timer</button>
+                  </div> 
+                  <hr />
+                  <!--<p>Description<i class="fa fa-memo-pad"></i></p>
+                  <p class="detail">No description for this task</p>
+                  <hr />-->
+                  <p class="circle checklist"><a href="#"><i class="fa fa-solid fa-circle-plus"></i>Checklist Item</a></p>
+                  <p>Checklist Items</p>
+                   <div class="check">
+                    <div class="circle addTask">
+                      <input type="checkbox"><input type="text" id="task">
+                      <a href="#">
+                        <div class="item">
+                          <div class="tooltip">Assign Task</div>
+                          <button class="icon"><i class="fa fa-regular fa-user-plus"></i></button>
+                        </div>
+                      </a>
+                      <i class="fa fa-light fa-xmark"></i>
+                    </div>
+                   </div>
+                  <hr />
+                  <div class="comment-box">
+                   <p><a href="#" class="circle" id="comment">Comments</a></p>
+                   <form class="comment-form">
+                    <div class="input-group">
+                      <textarea class="form-control" aria-label="With textarea" placeholder="Add Comment"></textarea>
+                    </div>
+                    <div class="drag-area">
+                      <span class="button">Drop files here to upload</span>
+                      <input type="file" class="browse" hidden />
+                      <span class="support">Supports: JPEG, JPG, PNG</span>
+                    </div>
+                    <button type="submit" class="circle">Add Comment</button>
+                   </form>
+                  </div>
+                </div>
+
+                <div class="col lg-2 bg-light" id="column2">
+                  <div class="main-info">
+                    <div class="about">
+                      <p>Task Info</p>
+                      <a href="#" class="circle" data-bs-toggle="popover" data-bs-placement="bottom" title="Actions" data-bs-html="true" data-bs-content="<ul><li><a href=''>Edit</a></li><li><a href=''>Copy</a></li><li><a href=''>Delete</a></li></ul>" data-bs-trigger="focus"><i class="fa fa-thin fa-circle"></i><i class="fa fa-thin fa-circle"></i><i class="fa fa-circle"></i></a> 
+                    </div>
+                    <p class="detail">Created at 2023-04-25 11:37:57</p>
+                  </div>
+                  <hr>
+                  <ul class="info">
+                    <li class="info-items">
+                        <i class="fa fa-star-half-stroke"></i>
+                        <p>Status: <a href="#" class="option" data-bs-toggle="popover" data-bs-placement="bottom" title="Change Status" data-bs-html="true" data-bs-content="<ul><li><a href=''>Mark as Not Started</a></li><li><a href=''>Mark as Testing</a></li><li><a href=''>Mark as Awaiting Feedback</a></li><li><a href=''>Mark as Complete</a></li></ul>" data-bs-trigger="focus">In Progress</a></p>                  
+                    </li>
+                    <li class="info-items">
+                      <i class="fa fa-calendar-plus"></i>
+                      <div class="dates">
+                      <label>Start Date: </label>
+                              <input class="circle" type="text" id="user1" placeholder="yyyy-mm--dd" />
+                      </div>
+                    </li>
+                    <li class="info-items">
+                      <i class="fa fa-calendar-check"></i>
+                      <div class="dates" >
+                      <label>Due Date: </label> 
+                              <input class="circle" type="text" id="user1" placeholder="yyyy-mm--dd" />
+                      </div>
+                    </li>
+                    <li class="info-items">
+                      <i class="fa fa-bolt-lightning"></i>
+                      <p>Priority: <a href="#" class="option" data-bs-toggle="popover" data-bs-placement="bottom" title="Priority" data-bs-html="true" data-bs-content="<ul><li><a href=''>Low</a></li><li><a href=''>High</a></li><li><a href=''>Urgent</a></li></ul>" data-bs-trigger="focus">Medium</a></p>                   
+                    </li>
+                    <li class="info-items">
+                       <i class="fa fa-clock"></i>
+                       <p>Hourly Rate: 0.00</p>
+                    </li>
+                    <li class="info-items">
+                       <i class="fa fa-light fa-credit-card"></i>
+                       <p>Billable: Billable <span class="bill">(Not Billed)</span> <span class="rate">(Project Fixed Rate)</span></p>
+                    </li>
+                    <li class="info-items">
+                       <i class="fa fa-star-of-life"></i>
+                       <p>Your Logged Time: 00:00</p>
+                    </li>
+                    <li class="info-items">
+                       <i class="fa fa-clock"></i>
+                       <p>Total Logged Time: 00:00</p>
+                    </li>
+                    <li class="info-items">
+                       <i class="fa fa-thin fa-square"></i>
+                       <p>Job number: 1</p>
+                    </li>
+                  </ul>
+                  <div class="dropdown">
+                    <div class=" circle scroll_dropdown">
+                     <input type="text" placeholder="Tag">
+                    </div>
+                    <ul class="circle scrollable-menu">
+                      <li><a class="circle dropdown-item" href="#">213213</a></li>
+                      <li><a class="circle dropdown-item" href="#">500</a></li>
+                      <li><a class="circle dropdown-item" href="#">5G</a></li>
+                      <li><a class="circle dropdown-item" href="#">8GB</a></li>
+                      <li><a class="circle dropdown-item" href="#">Accounting</a></li>
+                      <li><a class="circle dropdown-item" href="#">C++</a></li>
+                      <li><a class="circle dropdown-item" href="#">Call me in next 1 hour</a></li>
+                      <li><a class="circle dropdown-item" href="#">chn</a></li>
+                      <li><a class="circle dropdown-item" href="#">CRM software</a></li>
+                      <li><a class="circle dropdown-item" href="#">dad</a></li>
+                      <li><a class="circle dropdown-item" href="#">ESPADA</a></li>
+                      <li><a class="circle dropdown-item" href="#">fish</a></li>
+                      <li><a class="circle dropdown-item" href="#">fish</a></li>
+                      <li><a class="circle dropdown-item" href="#">gia vi</a></li>
+                      <li><a class="circle dropdown-item" href="#">Gxc</a></li>
+                      <li><a class="circle dropdown-item" href="#">hongkong</a></li>
+                      <li><a class="circle dropdown-item" href="#">hsbc</a></li>
+                      <li><a class="circle dropdown-item" href="#">i5</a></li>
+                      <li><a class="circle dropdown-item" href="#">ind</a></li>
+                      <li><a class="circle dropdown-item" href="#">joao</a></li>
+                      <li><a class="circle dropdown-item" href="#">KLaptop</a></li>
+                      <li><a class="circle dropdown-item" href="#">lead</a></li>
+                      <li><a class="circle dropdown-item" href="#">M42</a></li>
+                      <li><a class="circle dropdown-item" href="#">manufacturer</a></li>
+                      <li><a class="circle dropdown-item" href="#">OCEAN</a></li>
+                      <li><a class="circle dropdown-item" href="#">php</a></li>
+                      <li><a class="circle dropdown-item" href="#">tag1</a></li>
+                      <li><a class="circle dropdown-item" href="#">tag2</a></li>
+                      <li><a class="circle dropdown-item" href="#">test</a></li>
+                      <li><a class="circle dropdown-item" href="#">xxxx</a></li>
+                      <li><a class="circle dropdown-item" href="#">white</a></li>
+                      <li><a class="circle dropdown-item" href="#">ZORRO</a></li>
+                    </ul>
+                  </div>
+                  <hr>
+                  <div class="reminder">
+                    <p><i class="fa fa-thin fa-bell"></i>Reminders</p>
+                    <a href="#" class="circle" id="remind">Create Reminder</a>
+                    <p>No reminders for this task</p>
+                    <form class="remind-form">
+                      <p>Date to be notified</p>
+                      <input type="datetime-local" class="circle form-control">
+                      <p>Set reminder to</p>
+                      <div class="circle select_search_box">
+                        <select>
+                          <option>GTS Solution</option>
+                          <option>Jasir Jasir</option>
+                        </select>
+                      </div>
+                      <p>Description</p>
+                      <div class="input-group">
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                      </div>
+                      <button type="submit" class="circle">Create Reminder</button>
+                     </form>
+                  </div>
+
+                  <hr>
+                  <div class="assignees">
+                    <p><i class="fa fa-thin fa-user"></i>Assignees</p>
+                    <div class=" circle members">
+                      <p>Assign task to</p>
+                      <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="form-outline">
+                      <input type="search" id="form1" class="form-control" placeholder="Search Project Members.." aria-label="Search" />
+                    </div>
+                  </div>
+
+                  <hr>
+                  <div class="follow">
+                    <p><i class="fa fa-thin fa-user"></i>Followers</p>
+                    <div class=" circle followers">
+                      <p>Add followers</p>
+                      <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="content">
+                      <div class="search">
+                        <input type="text">
+                      </div>
+                      <hr>
+                      <ul class="circle options">
+                        <li>Yogesh Ramdasi</li>
+                        <li>Shashi Kumar</li>
+                        <li>Ray Red 123</li>
+                        <li>Mohamad hk</li>
+                        <li>Kiran Shinde</li>
+                        <li>Jasir Jasir</li>
+                        <li>Azeem Ullah</li>
+                        <li>GTS Solution</li>
+                        <li>test 1</li>
+                        <li>Salsa Billa</li>
+                        <li>Raju Sharma</li>
+                      </ul>
+                    </div>
+                    <p>No followers for this task</p>
+                  </div>
+
+                  <hr>
+                  <div class="drag-area">
+                    <span class="button">Drop files here to upload</span>
+                    <input type="file" class="browse" hidden />
+                    <span class="support">Supports: JPEG, JPG, PNG</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>
+      Click<a
+        href="#"
+        class="name"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        1
+      </a>
+    </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <!--<script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('[data-bs-toggle="popover"]').popover();
+      });
+    </script>
+    <script>
+      $(function () {
+          $(".dates #user1").datepicker({ 
+              'format' : 'yyyy-mm-dd',
+              'autoclose' : true, 
+          }).datepicker('update', new Date());
+      });
+    </script>
+   
+    <script src="script.js"></script>
+  </body>
+</html>
